@@ -15,8 +15,10 @@ deploy:
     secure: Aa/cLTs/RvGL0T6YcDc3ZGRgV7ibsbGKDvhSGDPJz3nSF6XGTpR8LVW+dvRsYhS76IEd3deaoDGdu/70DxzDFM9LQLYIRkypkAIFHALyuBfzKOuFSTtiO8QZOdaEW5luoijwHDuEPA/QjjGxzkK4NFUX2RMNeGUk9GwvmqpHA5kJrIDT5mkZ2nwg8WCFI0iDfhi09cx2l+ZiCpTYaQIXlAi3CE9NvP10NXSkg+B3o6XllO1xCw1x2xvt0cjeukkwN19/nygQicdVSx0S9GGR8WGJ1XvrOrRx7xnN1KRNVJTDsxD7pbaKK7neOtdF5bvyMVZ3lAV7blMFikP/DSRflLXJnMzyRzy96F683jxxBqZr+xWfscVFvfmJhNTZb0vuhZIS4bByibsU2phEWto0Hi+gufOlGjvSQ2aABlNjcZHCoAaaEytsEjI9RZRkh8spazXI6pejI9x+NhxM5oI4OFD5SbOnc3auW6d4fs2x3gxFQ6QMcLyYgi+qUpq/dL+YsainjzUFPJuNueB5tCbUt1ZzH57+UJ776qwWnJg2SC4YmN3+ASe2wAqJDBNBzNMA42vyHkOEHfvjd+6zGCHx0ce3y2ecbY1Q+rZI7qlJs8D+tU1ehX6cQBf4djQSBc+Q0+rB7ehGxgmrxiD1nch6fuKfdgswVG3E4QhswM8IJJQ=
   app: book-store-1
   run:
-  - rake db:migrate
-  - restart
+    - "rake db:reset"
+    - rake db:migrate
+    - rake db:seed
+    - restart
   on:
     branch: development
     rvm: 2.2.0
