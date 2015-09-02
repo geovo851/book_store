@@ -18,5 +18,5 @@ deploy:
   - rake db:migrate
   - restart
   on:
-    branch: master
+    branch: development
     rvm: 2.2.0
