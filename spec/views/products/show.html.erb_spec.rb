@@ -6,7 +6,7 @@ RSpec.describe "products/show", type: :view do
       :title => "Title",
       :description => "MyText",
       :image_url => "Image Url",
-      :pice => "9.99"
+      :price => "9.99"
     ))
   end
 

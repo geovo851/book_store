@@ -7,13 +7,13 @@ RSpec.describe "products/index", type: :view do
         :title => "Title",
         :description => "MyText",
         :image_url => "Image Url",
-        :pice => "9.99"
+        :price => "9.99"
       ),
       Product.create!(
         :title => "Title",
         :description => "MyText",
         :image_url => "Image Url",
-        :pice => "9.99"
+        :price => "9.99"
       )
     ])
   end

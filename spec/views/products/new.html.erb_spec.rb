@@ -6,7 +6,7 @@ RSpec.describe "products/new", type: :view do
       :title => "MyString",
       :description => "MyText",
       :image_url => "MyString",
-      :pice => "9.99"
+      :price => "9.99"
     ))
   end
 
@@ -21,7 +21,7 @@ RSpec.describe "products/new", type: :view do
 
       assert_select "input#product_image_url[name=?]", "product[image_url]"
 
-      assert_select "input#product_pice[name=?]", "product[pice]"
+      assert_select "input#product_price[name=?]", "product[price]"
     end
   end
 end
