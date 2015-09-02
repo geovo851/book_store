@@ -3,7 +3,7 @@ rvm:
 - 2.2.0
 branches:
   only:
-    - master
+  - development
 gemfile:
 - Gemfile
 before_script:
@@ -12,13 +12,11 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: a6VvkMJmctcGEdFkbZBKQ8FU2RJBX8p5ts6ugYFjBpwzto7R2UMUpK+sp/9I9TCUG4IsTIvu5v1giuE6pflfCqzLPTDXEisinymACmHgdDh0nEuflYlR3JF6Hl67f6gB389XFeZPURUE/fSFDb9KXnthWic1BmhDt7XUr55a5aPIwpz7ja0IlTwxbFjySciM0tCimxF0gCh1NAneywvxDTkDJMxIeqkec0E79RLorV5xI0uIMnFpJPBLtfR4YX4FOEpluLkqmFMdTkN1pzKIsB3iPzE/LA4SIBg1qm7SqKMKPn1jZA10nJOLJqzEEGB7veDsYI12CuR/9eWX+Jv20vvMs1D7ibOxZnc7e1Q1ito0w6VCgc7laXEEWW+HFQW6SOAIC4nM4dgISrvLN9cRfiwe5MV6EHBpD5nRuCp4VlmoDW7azN7kvHjLBlHlol3s3tcCzY46AQKbmpWEX2vLv39VJvrA4naZMS5wKJWsyXos7v+i1M1QTJPqnJRrdWTRzR00qtcre4eSGtxTL0FVfpf0nlTJfowyOmQPBVECHLIGtxqcIagj1GN5r5xI+sgMednZlCYVZ/QmkqGvmS581wQ6TNLhSl9zy7jy6CRFiHGfMoFZPUGWvxeL+r76exQgLQx4cOIPCOw4osbsqw0iPprlYYaondfl7xhmPGDXKTE=
-  app: store-1
+    secure: Aa/cLTs/RvGL0T6YcDc3ZGRgV7ibsbGKDvhSGDPJz3nSF6XGTpR8LVW+dvRsYhS76IEd3deaoDGdu/70DxzDFM9LQLYIRkypkAIFHALyuBfzKOuFSTtiO8QZOdaEW5luoijwHDuEPA/QjjGxzkK4NFUX2RMNeGUk9GwvmqpHA5kJrIDT5mkZ2nwg8WCFI0iDfhi09cx2l+ZiCpTYaQIXlAi3CE9NvP10NXSkg+B3o6XllO1xCw1x2xvt0cjeukkwN19/nygQicdVSx0S9GGR8WGJ1XvrOrRx7xnN1KRNVJTDsxD7pbaKK7neOtdF5bvyMVZ3lAV7blMFikP/DSRflLXJnMzyRzy96F683jxxBqZr+xWfscVFvfmJhNTZb0vuhZIS4bByibsU2phEWto0Hi+gufOlGjvSQ2aABlNjcZHCoAaaEytsEjI9RZRkh8spazXI6pejI9x+NhxM5oI4OFD5SbOnc3auW6d4fs2x3gxFQ6QMcLyYgi+qUpq/dL+YsainjzUFPJuNueB5tCbUt1ZzH57+UJ776qwWnJg2SC4YmN3+ASe2wAqJDBNBzNMA42vyHkOEHfvjd+6zGCHx0ce3y2ecbY1Q+rZI7qlJs8D+tU1ehX6cQBf4djQSBc+Q0+rB7ehGxgmrxiD1nch6fuKfdgswVG3E4QhswM8IJJQ=
+  app: book-store-1
   run:
-    - "rake db:reset"
-    - "rake db:migrate"
-    - "rake db:seed"
-    - restart
+  - rake db:migrate
+  - restart
   on:
     branch: master
     rvm: 2.2.0
