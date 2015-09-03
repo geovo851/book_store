@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe "products/edit", type: :view do
   before(:each) do
     @product = assign(:product, Product.create!(
-      :title => "MyString",
+      :title => "MyString15255555",
       :description => "MyText",
-      :image_url => "MyString",
+      :image_url => "MyString.jpg",
       :price => "9.99"
     ))
   end
