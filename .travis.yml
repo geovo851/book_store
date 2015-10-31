@@ -12,13 +12,12 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: Aa/cLTs/RvGL0T6YcDc3ZGRgV7ibsbGKDvhSGDPJz3nSF6XGTpR8LVW+dvRsYhS76IEd3deaoDGdu/70DxzDFM9LQLYIRkypkAIFHALyuBfzKOuFSTtiO8QZOdaEW5luoijwHDuEPA/QjjGxzkK4NFUX2RMNeGUk9GwvmqpHA5kJrIDT5mkZ2nwg8WCFI0iDfhi09cx2l+ZiCpTYaQIXlAi3CE9NvP10NXSkg+B3o6XllO1xCw1x2xvt0cjeukkwN19/nygQicdVSx0S9GGR8WGJ1XvrOrRx7xnN1KRNVJTDsxD7pbaKK7neOtdF5bvyMVZ3lAV7blMFikP/DSRflLXJnMzyRzy96F683jxxBqZr+xWfscVFvfmJhNTZb0vuhZIS4bByibsU2phEWto0Hi+gufOlGjvSQ2aABlNjcZHCoAaaEytsEjI9RZRkh8spazXI6pejI9x+NhxM5oI4OFD5SbOnc3auW6d4fs2x3gxFQ6QMcLyYgi+qUpq/dL+YsainjzUFPJuNueB5tCbUt1ZzH57+UJ776qwWnJg2SC4YmN3+ASe2wAqJDBNBzNMA42vyHkOEHfvjd+6zGCHx0ce3y2ecbY1Q+rZI7qlJs8D+tU1ehX6cQBf4djQSBc+Q0+rB7ehGxgmrxiD1nch6fuKfdgswVG3E4QhswM8IJJQ=
+    secure: ZCEE7Z5skz64y+N2HVObatKO1JC9Eyp4aOpBMCIr6WsTdf1lHzFtFvBB/39J9j0Asyssvxbe2Ba/oacJ67OW+QgVejh6ZZKkUsMQBB9DnOvl7+y3XJbKZv5vfGzBxi732CLRGOVeUwv0SghBTHyhDJlZtdQfG+KxG2hFNiA5ll4NRCB9Ix0dZ7Ur/DtS7D9WSwk+YPBkDGAZ2Bt8wu73/6Ma5kxVQzhqSxPJfNObDt+vomW05HrsCniUXGtyThNdrqVDg8iTp0otDlTfoz3PNxZ0S7BNimmtr1OYGEB77Cwx3hJekFCQbGPDBYIF0Uj+1yWbKTLu2P/4Wo6UfvQvvJz/aDM5UjR1/ccTIhLnaH+uIV5Tbv6uSLTZsQuwTdyuFlrnV7jiuePbtkkGOO9x180og4mJGXb5UB1Idf2bppdnrMH5nvd4h/YYgUqeVtJGtUjByZhVtPLQLpi/oXtn9akYQsXEWa+qyyin6NU1DY59B7aI3FE/o48+a8lza6olRpuSNcdo293oVMDS/o/COYjdEsEFjzKgDQq+u04QZ7NzfbWbKXwUItRS/V3kW2tQFAgIR9b+06JU8Qp/Sb44KokuDshlVU/CaUA7CELNESTjxY5N8PSWjfhMpmHKx+UzZkkJI8sY8jxg4brC7rVPVnzo4tCBZnOXvPzMq7E0TSM=
   app: book-store-1
   run:
-    - "rake db:reset"
-    - rake db:migrate
-    - rake db:seed
-    - restart
+  - rake db:migrate
+  - rake db:seed
+  - restart
   on:
     branch: development
     rvm: 2.2.0
